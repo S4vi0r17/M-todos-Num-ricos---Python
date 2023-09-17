@@ -1,10 +1,14 @@
 import sympy as sp
+import math as m
 
 # Define la variable simbólica
 x = sp.Symbol('x')
 
 # Define la función
-f = sp.exp(-x) - x
+# f = sp.exp(-x) - x
+
+# usa el valor de pi
+f = x**2 * m.pi * (9-x) -60
 
 # Calcula automáticamente la derivada de la función
 f_derivada = sp.diff(f, x)
@@ -32,7 +36,7 @@ def newton_raphson(f, x0, tol):
 
 
 # Uso del método de Newton-Raphson
-x0 = 0.5
+x0 = 1
 tolerance = 1e-3
 root = newton_raphson(f, x0, tolerance)
 
