@@ -1,7 +1,7 @@
-# MÉTODO DE LA BISECCIÓN
+# Método de la Bisección
 
-![3](Semana1/img/biseccion.png)
+![biseccion](Semana1/img/biseccion.png)
 
-# Método de la secante
+# Método de la Secante 
 
 ![secante](Semana2/img/secante.png)
