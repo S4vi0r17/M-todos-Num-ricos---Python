@@ -1,9 +1,13 @@
 import numpy as np
 
-A = np.array([[1.0, 2.0, 0.0, -1.0],
-              [0.0, 0.0, 1.0, 1.0],
-              [0.0, 0.0, 4.0, -3.0],
-              [0.0, 2.0, 0.0, 1.0]])
+A = np.array(
+    [
+        [1.0, 2.0, 0.0, -1.0],
+        [0.0, 0.0, 1.0, 1.0],
+        [0.0, 0.0, 4.0, -3.0],
+        [0.0, 2.0, 0.0, 1.0],
+    ]
+)
 
 b = np.array([2.0, 2.0, 1.0, 3.0])
 
@@ -22,8 +26,10 @@ for i in range(min(filas, columnas - 1)):
     if pivote == 0:
         for j in range(i + 1, filas):
             if AB[j, i] != 0:
-                AB[[i, j]] = AB[[j, i]]  # Este procedimiento intercambia filas y es propio de NumPy
-                pivote = AB[i, i]
+                AB[[i, j]] = AB[
+                    [j, i]
+                ]  # Este procedimiento intercambia filas y es propio de NumPy
+            pivote = AB[i, i]
 
     # Realiza la eliminación gaussiana en esta columna
     for j in range(i + 1, filas):
@@ -31,8 +37,8 @@ for i in range(min(filas, columnas - 1)):
         AB[j, i:] -= factor * AB[i, i:]
 
 # Ahora, separamos la matriz escalonada en una matriz y un vector
-A_escalonada = AB[:, :-1] # Todas las filas, todas las columnas menos la última
-b_escalonado = AB[:, -1] # Todas las filas, sólo la última columna
+A_escalonada = AB[:, :-1]  # Todas las filas, todas las columnas menos la última
+b_escalonado = AB[:, -1]  # Todas las filas, sólo la última columna
 
 print("Matriz escalonada:")
 print(A_escalonada)
