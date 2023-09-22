@@ -54,7 +54,7 @@ max_iteraciones = max_iteraciones(a, b, tolerancia)
 
 if __name__ == "__main__":
     # Graficamos la función en el intervalo [-1.0, 2.0]
-    x = np.linspace(a, b, 100)  # Creamos un vector de 100 puntos equiespaciados
+    x = np.linspace(-2, 2, 100)  # Creamos un vector de 100 puntos equiespaciados
     y = f(x)  # Evaluamos la función en cada punto del vector x
 
     plt.plot(x, y)  # Graficamos la función
