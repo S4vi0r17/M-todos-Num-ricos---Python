@@ -19,7 +19,7 @@ def biseccion(a, b, max_iter):
         return None
     
     # Mostrar datos de la tabla
-    print("Iteración|\ta\t|\tc\t|\tb\t|\tf(a)\t|\tf(c)\t|\tf(b)")
+    print("Iteración|\ta\t\t|\tc\t\t|\tb\t\t|\tf(a)\t|\tf(c)\t|\tf(b)")
 
     iteracion = 0
     while iteracion <= max_iter:
@@ -32,7 +32,7 @@ def biseccion(a, b, max_iter):
 
         # Mostrar datos de la tabla con 5 decimales
         print(
-            f"{iteracion}\t |\t{a:.5f}\t|\t{c:.5f}\t|\t{b:.5f}\t|\t{aS}\t|\t{cS}\t|\t{bS}"
+            f"{iteracion}\t |\t{a:.6f}\t|\t{c:.6f}\t|\t{b:.6f}\t|\t{aS}\t|\t{cS}\t|\t{bS}"
         )
 
         if f(c) * f(a) < 0:
