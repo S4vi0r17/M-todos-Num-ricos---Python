@@ -7,10 +7,6 @@ def f(x):
 
 
 def bisection(f, a, b, tol):
-    # approximates a root, R, of f bounded
-    # by a and b to within tolerance
-    # | f(m) | < tol with m the midpoint
-    # between a and b
 
     # check if a and b bound a root
     if np.sign(f(a)) == np.sign(f(b)):
@@ -24,7 +20,7 @@ def bisection(f, a, b, tol):
 
     # initialize table
     print("a\t\tc\t\tb\t\tf(a)\t\tf(c)\t\tf(b)")
-    print("-" * 70)
+    print("-" * 89)
 
     # iterate until convergence or max iterations reached
     for i in range(1, 101):
