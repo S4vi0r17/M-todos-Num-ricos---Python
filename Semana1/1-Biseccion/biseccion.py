@@ -4,11 +4,12 @@ import numpy as np
 
 
 def f(x):
-    return np.exp(-x) - x
+    return x * (18-2*x) * (14-2*x) - 100
 
 
 def max_iteraciones(a, b, tol):
     it = math.log((b - a) / (2 * tol)) / math.log(2)
+    print("Iteraciones necesarias:", math.ceil(it))
     return math.ceil(it)
 
 
@@ -40,21 +41,26 @@ def biseccion(a, b, max_iter):
         else:
             a = c
 
+        # print("\nf(c): ",f(c))
+        # print(f"Error: {abs(f(c)):.6f}")
+        if f(c) == 0:
+            return c
+
         iteracion += 1
 
     return c
 
 
 # Parámetros iniciales
-a = 0.0
-b = 1.0
-tolerancia = 1e-3
-max_iteraciones = max_iteraciones(a, b, tolerancia)
+a = 4
+b = 6
+tolerancia = 1e-4
+max_iter = max_iteraciones(a, b, tolerancia)
 
 
 if __name__ == "__main__":
     # Graficamos la función en el intervalo [-1.0, 2.0]
-    x = np.linspace(-2, 2, 100)  # Creamos un vector de 100 puntos equiespaciados
+    x = np.linspace(-4, 10, 1000)  # Creamos un vector de 100 puntos equiespaciados
     y = f(x)  # Evaluamos la función en cada punto del vector x
 
     plt.plot(x, y)  # Graficamos la función
@@ -62,7 +68,7 @@ if __name__ == "__main__":
     plt.grid()  # Agregamos una cuadrícula
     plt.show()  # Mostramos la gráfica
 
-    resultado = biseccion(a, b, max_iteraciones)
+    resultado = biseccion(a, b, max_iter)
 
     if resultado is not None:
         print("\nLa raíz aproximada es:", resultado)
