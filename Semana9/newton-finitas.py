@@ -51,7 +51,6 @@ def interpolate(x, y, x_interp):
 
     return result
 
-# Ejemplo de uso
 x = np.array([0, 1, 2, 3])
 y = np.array([2, 1.3679, 1.1353, 1.0497])
 
