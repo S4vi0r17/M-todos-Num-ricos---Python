@@ -26,10 +26,10 @@ def runge_kutta_third_order(t0, y0, h, tn):
     return results
 
 # Valores iniciales
-t0 = 0
-y0 = 1
-tn = 0.5
-h = 0.1
+t0 = 0 # t0 = x0
+y0 = 1 # y0 = y(x0)
+tn = 0.5 # tn = xn
+h = 0.1 # h = (xn - x0) / n
 
 iteration_results = runge_kutta_third_order(t0, y0, h, tn)
 
