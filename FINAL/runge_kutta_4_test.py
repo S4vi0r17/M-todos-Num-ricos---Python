@@ -46,3 +46,5 @@ iteration_results = runge_kutta_fourth_order(x0, y0, h, xn)
 print("{:<3} {:<5} {:<9} {:<12} {:<12} {:<12} {:<12} {:<12}".format(*iteration_results[0]))  # Encabezados
 for row in iteration_results[1:]:
     print("{:<3} {:<5} {:<9} {:<12} {:<12} {:<12} {:<12} {:<12}".format(*row))
+
+# https://chat.openai.com/share/bce9a94b-c49e-46d5-85e9-dfb5072aaaa8
