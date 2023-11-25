@@ -90,3 +90,5 @@ print("f(b) =", f(b))
 print("Suma de valores en Σ f(xi_impar):", sum_odd)
 print("Suma de valores en Σ f(xi_par):", sum_even)
 print("\nAproximación con la regla de Simpson compuesta:", approximation_simpson)
+
+# https://chat.openai.com/share/b99c7f94-28df-4f3b-a6ec-b3b0ee5e7b58
