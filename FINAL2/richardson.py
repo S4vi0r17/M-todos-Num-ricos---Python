@@ -37,3 +37,5 @@ print("\nAproximación de la derivada en x = 1:", approx_derivative)
 # Calcular el valor exacto de la derivada en x = 1
 exact_derivative = df(1)
 print("Valor exacto de la derivada en x = 1:", exact_derivative)
+
+# https://chat.openai.com/share/e29c7f57-959c-4658-9c77-17242dfa901f
