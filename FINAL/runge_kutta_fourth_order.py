@@ -1,7 +1,7 @@
 import math
 
 def f(t, y):
-    return 1 + t - y 
+    return 0.01 * (70 - y) * (50 - y)
 
 def exact_solution(t):
     return math.exp(-t) + t  # Solución exacta de la EDO
@@ -28,8 +28,8 @@ def runge_kutta_fourth_order(x0, y0, h, xn):
 
 # Valores iniciales y parámetros necesarios para el método Runge-Kutta
 x0 = 0  # Punto inicial x0
-y0 = 1  # Valor inicial y0
-xn = 0.5  # Punto final xn
+y0 = 0  # Valor inicial y0
+xn = 25  # Punto final xn
 h = 0.1  # Tamaño de paso h
 
 # Llamada a la función Runge-Kutta de cuarto orden
